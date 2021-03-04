@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Slides with revealjs</title>
+    <meta name="description" content="pyCompressor">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/blood.css">
+    <!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <!-- Front slide -->
+        <section>
+          <a href="https://revealjs.com">
+						<img src="logo/reveal-white-text.svg" alt="reveal.js logo" style="height: 125px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+					</a>
+          <h3> <a href="https://github.com/Radonirinaunimi">REVEAL-JS SLIDES TEMPLATE</a> </h3>
+          <p>
+						<small>Created by <a href="https://github.com/Radonirinaunimi">Tanjona R. Rabemananjara</a></small>
+					</p>
+        </section>
+        <!-- Introduction -->
+        <section style="font-size:80%">
+          <h2> About this template </h2>
+          <p align="justify">
+            The following gives a brief introduction and tutorial on how one can use this template to create easy and quick but
+            still eye-appealing slides. Currently, LaTeX-Beamer is still the go-to document preparation system when it comes to 
+            writing slides, especially in the scientific community. Hence, this template aims to achieve two things:
+          </p>
+          <ul>
+            <li class="fragment">Making slides presentation more interactive</li>
+            <li class="fragment">Making the experience of writing slides less painful and fast</li>
+          </ul>
+        </section>
+        <!-- Speed benchmark -->
+        <section>
+          <!-- Vertical Slide 1 -->
+          <section>
+            <h2> Vertical Slides </h2>
+            <p align="justify">
+              One of the most useful features of reveal.js is the fact that one can add vertical slides. This would be usedful 
+              when it comes to regrouping ideas. This can be achieved by just adding a section tag inside the section as follows:
+              <pre><code data-trim data-noescape data-line-numbers>
+                &lt;section&gt;
+                  &lt;section&gt;Vertical Slide 1&lt;/section&gt;
+                  &lt;section&gt;Vertical Slide 2&lt;/section&gt;
+                &lt;/section&gt;
+              </code></pre>
+          </section>
+          <!-- Vertical Slide 2 -->
+          <section>
+            <h2> Another Slide </h2>
+            <p align="justify">
+              One can even highlight specific lines.
+              <pre><code data-trim data-noescape data-line-numbers="1,4|2-3">
+                &lt;section&gt;
+                  &lt;section&gt;Vertical Slide 1&lt;/section&gt;
+                  &lt;section&gt;Vertical Slide 2&lt;/section&gt;
+                &lt;/section&gt;
+              </code></pre>
+          </section>
+        </section>
+        <!-- Animation -->
+        <section>
+          <h2> Animation </h2>
+          <p align="justify">
+            Perhaps one of the main advantages of reveal-js over Beamer is the fact that one can add videos.
+          </p>
+          <video width="75%" data-autoplay src="videos/schrodinger.mp4" type="video/mp4"></video>
+        </section>
+        <!-- Mathematica Expressions -->
+        <section>
+          <h2> MATHS </h2>
+          <p align="justify">
+            Writing mathematical expressions is also simple.
+          </p>
+          <pre><code data-trim data-noescape>
+            \[\begin{aligned}
+            x &amp; = a_1 (\text{mod} \: n_1) 
+            x &amp; = a_2 (\text{mod} \: n_2) 
+            x &amp; = a_3 (\text{mod} \: n_3) 
+            \end{aligned} \]
+          </code></pre>
+          <p align="justify">
+            The above translates into the following:
+          </p>
+          \[\begin{aligned}
+          x &amp; \equiv a_1 (\text{mod} \: n_1) \\ 
+          x &amp; \equiv a_2 (\text{mod} \: n_2) \\ 
+          x &amp; \equiv a_3 (\text{mod} \: n_3) \\ 
+          \end{aligned} \]
+        </section>
+        
+      </div>
+    </div>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/math/math.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+    <script>
+      Reveal.initialize({
+				hash: true,
+				center: true,
+				controls: true,
+				progress: true,
+        autoPlayMedia: true,
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          // pass other options into `MathJax.Hub.Config()`
+          TeX: { Macros: { RR: "{\\bf R}" } }
+        },
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMath, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+			});
+    </script>
+  </body>
+</html>
